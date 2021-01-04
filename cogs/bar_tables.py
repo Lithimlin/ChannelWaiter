@@ -107,20 +107,7 @@ class BarTables(commands.Cog):
                 await ctx.send(embed=embed)
                 return
 
-
         cat = cats[cat]
-        channels = [c.name for c in cat.channels]
-        try:
-            channels = [int(c[len(name):]) for c in channels if c.startswith(name)]
-        except ValueError as e:
-            embed = discord.Embed(title='Error',
-                description='Something unexpected happened.\
-                    Cancelling channel creation.',
-                color=colors['Error'])
-            await ctx.send(embed=embed)
-            logger.error(e)
-            return
-
         await cat.create_voice_channel(f'{name}', user_limit=limit)
 
         embed = discord.Embed(title='Done', description='Enjoy your time.\
@@ -128,7 +115,7 @@ class BarTables(commands.Cog):
             color=colors['OK'])
         await ctx.send(embed=embed)
 
-        logger.info(f'{author.name} created the temporary voice channel \"{name} {n}\"\
+        logger.info(f'{author.name} created the temporary voice channel \"{name}\"\
             for {limit} people')
 
     @commands.command(name='resize', aliases=['expand','shrink','extend'],
