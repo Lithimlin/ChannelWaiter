@@ -16,12 +16,12 @@ t!resize X - resize the current temporary voice channel to X users.
 ```
 
 ## Hosting it yourself
-If you want to host it yourself, create a file called `.env` and add the following line to it:
+If you want to host it yourself, follow these steps:
+  1. create a file called `.env` and add the following line to it:
 ```
 DISCORD_TOKEN=<ADD YOUR TOKEN HERE!>
 ```
-Then,
-  1. Open a new python 3 environment using `python3 -m venv env`
-  2. Activate the environment with `source env/bin/activate`
-  3. Install the modules from `requirements.txt` using `pip install -r requirements.txt`
-  4. Finally, run the bot using `python run.py`
+  2. Open a new python 3 environment using `python3 -m venv env`
+  3. Activate the environment with `source env/bin/activate`
+  4. Install the modules from `requirements.txt` using `pip install -r requirements.txt`
+  5. Finally, run the bot using `python run.py`
