@@ -9,7 +9,7 @@ from util.logger import logger
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 PREFIX = 't!'
-extensions = ['cogs.bar_tables']
+extensions = ['cogs.temp_channels']
 
 bot = commands.Bot(command_prefix=PREFIX)
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ from util.colors import colors
 from util.emojis import *
 import oyaml as yaml
 
-class BarTables(commands.Cog):
+class TempChannels(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -196,4 +196,4 @@ class BarTables(commands.Cog):
         return selection
 
 def setup(bot):
-    bot.add_cog(BarTables(bot))
+    bot.add_cog(TempChannels(bot))
